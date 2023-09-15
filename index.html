@@ -1,49 +1,22 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>noppapeli</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikanoppa</title>
+</head>
+<body>
     <h1 id="name">Sikanoppapeli</h1>
 
-    <!--<p id="kysy">Kuinka monta pelaajaa?</p>
-    <select id="pelaajat" name="pelaajat" class="form-control"> hmmm - add options  to functions?-if lause
-      <option value="yksip">1 pelaaja</option>
-      <option value="kaksip">2 pelaajaa</option>
-      <option value="kolmep">2 pelaajaa</option>
-      <option value="neljäp">2 pelaajaa</option>
-    </select>
-    <p>Kuinka monta noppaa?</p>-->
-    <!--<select id="nopatK" name="nopatK" class="form-control"> make it so it reads these and chooces the right type of a game
-        <option value="yksiN">1 noppa </option>
-        <option value="kaksiN">2 noppaa</option>
-      </select>-->
+      <p id="kysymys">Kuinka monta noppaa?</p>
+      
+      <div class="peliV">
+          
+          <button onclick="window.location.href='onenoppa.html'"> 1 noppa </button>
+          <button onclick="window.location.href='twonoppa.html'"> 2 noppaa </button>
+        
+      </div> 
 
-    <div class="container">
-      <canvas id="noppa"   height="100" width="100"></canvas><!--style="border:1px solid #000000;"-->
-
-
-      <button onclick="roll()">Pyöräytä</button>
-    </div>
-
-    <button onclick="vuoronVaihto()" id="vaihdavuoro">Vaihda vuoro</button>
-
-  <div class="container">
-    <p> Pisteet: <span id="pisteet"> </span> <p>
-
-    <p> Vuoro: <span id="turn"> </span>  </p>
-    <p><span id="voittaja"> </span> </p>
-  </div>
-
-  <div class="container" id="pistetaulukko">
-    <p>Pelaaja 1:  <span id="paikka1"></span><p>
-    <p>Pelaaja 2:  <span id="paikka2"></span></p>
-  </div>
-
-
-  <script src="peli.js"></script>
-  <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </body>
 </html>
