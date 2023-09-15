@@ -46,8 +46,7 @@ function refresh () {
   var lista = pelaajat.length - 1;
     if (vuoro <= lista ){
       document.getElementById('turn').innerHTML = tekst + ". " + pelaajat[vuoro] +  " vuoro";
-    }
-    if (pistetaulukko[final] >= 100){ 
+    } else if (pistetaulukko[final] >= 100){ 
       document.getElementById("voittaja").innerText="Pelaaja " + pelaajat[final] + " voittaa!";
       document.getElementById("voittaja").style.display = 'block';
     }
