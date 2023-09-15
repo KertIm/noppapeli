@@ -86,6 +86,10 @@ function nayta(){
   document.getElementById('scores').innerHTML = '';
 
   for (var i=0; i < pelaajat.length ; i++){
+    if (pistetaulukko[i] == 0) {
+      document.getElementById('scores').innerHTML += '<li>' + pelaajat[i] + '</li>' + ": 0";
+    } else {
       document.getElementById('scores').innerHTML += '<li>' + pelaajat[i] + '</li>' + ": " + pistetaulukko[i];
+    }
   }
 }
