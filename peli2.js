@@ -59,9 +59,19 @@ function vuoronVaihto() {
 
  if(vuoro < maara){
   pistetaulukko[vuoro] += pisteet;
+
+  if (pistetaulukko[vuoro] >= 100){ 
+    document.getElementById("voittaja").innerText="Pelaaja " + pelaajat[vuoro] + " voittaa!";  
+    document.getElementById("voittaja").style.display = 'block';
+  }
   vuoro += 1;
  } else {
   pistetaulukko[vuoro] += pisteet;
+
+  if (pistetaulukko[vuoro] >= 100){ 
+    document.getElementById("voittaja").innerText="Pelaaja " + pelaajat[vuoro] + " voittaa!";  
+    document.getElementById("voittaja").style.display = 'block';
+  }
   vuoro = 0;
  }
   pisteet = 0; 

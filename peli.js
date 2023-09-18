@@ -31,26 +31,33 @@ function vuoronVaihto() {
   
   if(vuoro < maara){
     pistetaulukko[vuoro] += pisteet;
+
+    if (pistetaulukko[vuoro] >= 100){ 
+      document.getElementById("voittaja").innerText="Pelaaja " + pelaajat[vuoro] + " voittaa!";
+      document.getElementById("voittaja").style.display = 'block';
+    }
     vuoro += 1;
    } else {
     pistetaulukko[vuoro] += pisteet;
+    
+    if (pistetaulukko[vuoro] >= 100){ 
+      document.getElementById("voittaja").innerText="Pelaaja " + pelaajat[vuoro] + " voittaa!";
+      document.getElementById("voittaja").style.display = 'block';
+    }
     vuoro = 0;
    }
+   
     pisteet = 0; 
     refresh();
   } 
 function refresh () {
   
   var tekst = vuoro +1;
-  var final = vuoro ;
   var lista = pelaajat.length - 1;
     if (vuoro <= lista ){
       document.getElementById('turn').innerHTML = tekst + ". " + pelaajat[vuoro] +  " vuoro";
     }
-    if (pistetaulukko[final] >= 100){ 
-      document.getElementById("voittaja").innerText="Pelaaja " + pelaajat[final] + " voittaa!";
-      document.getElementById("voittaja").style.display = 'block';
-    }
+    
     document.getElementById('pisteet').innerHTML = pisteet;
     nayta();
 }
